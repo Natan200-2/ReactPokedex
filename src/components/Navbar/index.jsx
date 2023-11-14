@@ -53,25 +53,16 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function NavBar({filter}) {
   return (
-    <Box sx={{ flexGrow: 1, marginBottom: '2em' }}>
-      <AppBar position="static">
+    <Box sx={{ flexGrow: 1, marginBottom: '2em'}} >
+      <AppBar position="static" sx={{backgroundColor: "#D80032"}}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            Pokemon
           </Typography>
           <Search onChange={(e) => filter(e.target.value)}>
             <SearchIconWrapper>

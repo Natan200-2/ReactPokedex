@@ -8,11 +8,11 @@ import Typography from '@mui/material/Typography';
 
 export default function PokeCard({name, image}) {
   return (
-    <Card sx={{ maxWidth: 345, marginLeft: '1em' }}>
+    <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 250 }}
         image= {image}
-        title="green iguana"
+        title= {name}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
