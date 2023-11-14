@@ -14,7 +14,7 @@ const Search = styled('div')(({ theme }) => ({
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.white, 0.20),
   },
   marginLeft: 0,
   width: '100%',
@@ -45,13 +45,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
       width: '12ch',
       '&:focus': {
-        width: '20ch',
+        width: '25ch',
       },
     },
   },
 }));
 
-export default function NavBar() {
+export default function NavBar({filter}) {
   return (
     <Box sx={{ flexGrow: 1, marginBottom: '2em' }}>
       <AppBar position="static">
@@ -73,7 +73,7 @@ export default function NavBar() {
           >
             MUI
           </Typography>
-          <Search>
+          <Search onChange={(e) => filter(e.target.value)}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
